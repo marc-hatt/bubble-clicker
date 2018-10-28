@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css?family=Bubblegum+Sans');
+
+body {
+    background-color: #C5F0FF;
+    margin: 0px;
+}
+
+
+.viewport {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#bath img {
+  positon: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+
+#counter {
+  font-family: 'Bubblegum Sans';
+  border-width: thin;
+  text-align: center;
+  font-size: 30px;
+  color: absolute;
+  position: absolute;
+  margin: 15px;
+}
+
+
+.bubble-1 img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.bubble-2 img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+.bubble-3 img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+
+
+
+@-webkit-keyframes mymove {
+    from {top: 100px;}
+    to {top:-1300px;}
+}
+
+@keyframes mymove {
+    from {top: 100px;}
+    to {top:-1300px;}
+}
+
+
+
+
+
+/* ------- MediaQuery Responsive --------- */
+
+
+/* For width 500px and larger: */
+@media only screen and (min-width: 500px) {
+
+
+    .bubble-1 {
+        margin-left: 600px;
+        width: 150px;
+        height: auto;
+        position: relative;
+        -webkit-animation: mymove forwards;
+        -webkit-animation-duration: 0s;
+      /*  animation: mymove infinite; */
+        animation-duration: 14s;
+    }
+
+    .bubble-2 {
+        margin-left: 200px;
+        width: 260px;
+        height: auto;
+        position: relative;
+        -webkit-animation: mymove forwards;
+        -webkit-animation-duration: 0s;
+      /*  animation: mymove infinite; */
+        animation-duration: 20s;
+    }
+
+
+    .bubble-3 {
+        margin-left: 800px;
+        width: 200px;
+        height: auto;
+        position: relative;
+        -webkit-animation: mymove forwards;
+        -webkit-animation-duration: 0s;
+      /*  animation: mymove infinite; */
+        animation-duration: 17s;
+    }
+
+
+}
+
+
+
+/* For width 499px and smaller:*/
+@media only screen and (max-width: 499px) {
+
+
+
+  .bubble-1 {
+      margin-left: 300px;
+      width: 50px;
+      height: auto;
+      position: relative;
+      -webkit-animation: mymove infinite;
+      -webkit-animation-duration: 0s;
+    /*  animation: mymove infinite; */
+      animation-duration: 14s;
+  }
+
+  .bubble-2 {
+      margin-left: 50px;
+      width: 100px;
+      height: auto;
+      position: relative;
+      -webkit-animation: mymove infinite;
+      -webkit-animation-duration: 0s;
+    /*  animation: mymove infinite; */
+      animation-duration: 20s;
+  }
+
+  .bubble-3 {
+      margin-left: 400px;
+      width: 140px;
+      height: auto;
+      position: relative;
+      -webkit-animation: mymove infinite;
+      -webkit-animation-duration: 0s;
+    /*  animation: mymove infinite; */
+      animation-duration: 17s;
+  }
+
+}
+/* ------- MediaQuery Responsive --------- */
