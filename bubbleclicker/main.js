@@ -12,6 +12,15 @@ setInterval(function() {
   shrinkThree();
 }, 1000);
 
+
+let addPoints = function() {
+  if (points >= 10) {
+    points = points + 10;
+  } else {
+    points = points + 1;
+  }
+}
+
 /*--------bubbleOne-----------*/
 let statusBubbleOne = 10;
 
@@ -24,11 +33,7 @@ let shrinkOne = function(e) {
 };
 
 let clickerOne = function(e) {
-  if (points >= 10) {
-    points = points + 10;
-  } else {
-    points = points + 1;
-  }
+  addPoints()
   statusBubbleOne = statusBubbleOne + 1;
   debug.innerHTML = statusBubbleOne;
   bubbleOne.style.transform = "scale(" + statusBubbleOne / 10 + ")";
@@ -47,11 +52,7 @@ let shrinkTwo = function(e) {
 };
 
 let clickerTwo = function(e) {
-  if (points >= 10) {
-    points = points + 10;
-  } else {
-    points = points + 1;
-  }
+  addPoints()
   statusBubbleTwo = statusBubbleTwo + 1;
   bubbleTwo.style.transform = "scale(" + statusBubbleTwo / 10 + ")";
 
@@ -71,11 +72,7 @@ let shrinkThree = function(e) {
 };
 
 let clickerThree = function(e) {
-  if (points >= 10) {
-    points = points + 10;
-  } else {
-    points = points + 1;
-  }
+  addPoints()
   statusBubbleThree = statusBubbleThree + 1;
   bubbleThree.style.transform = "scale(" + statusBubbleThree / 10 + ")";
 
