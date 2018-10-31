@@ -6,11 +6,23 @@ let debug = document.getElementById("debug");
 
 let points = 0;
 
-setInterval(function() {
+/* startet das update alle sekunde */
+var interval = setInterval(function() {
   shrinkOne();
   shrinkTwo();
   shrinkThree();
+  checkGameover();
 }, 1000);
+
+let checkGameover = function() {
+  if (statusBubbleOne === 0 && statusBubbleTwo === 0 && statusBubbleThree === 0) {
+    clearInterval(interval); /* stopt das update alle sekunde*/
+
+
+    /* hier dein code */
+    alert("hier bitte ein handling für gameover. zum beispiel ein overlay über das spiel.")
+  }
+}
 
 
 let addPoints = function() {
