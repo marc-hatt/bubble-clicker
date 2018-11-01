@@ -49,8 +49,9 @@ body {
   cursor: pointer;
 }
 
-
-
+.bubble-reset {
+  display: none;
+}
 
 @-webkit-keyframes mymove {
     from {top: 100px;}

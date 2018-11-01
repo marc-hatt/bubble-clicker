@@ -1,4 +1,5 @@
 let bubbleOne = document.getElementById("bubbleOne");
+let bubbleOneImg = document.getElementById("bubbleOneImg");
 let bubbleTwo = document.getElementById("bubbleTwo");
 let bubbleThree = document.getElementById("bubbleThree");
 let counter = document.getElementById("counter");
@@ -45,10 +46,34 @@ let shrinkOne = function(e) {
 };
 
 let clickerOne = function(e) {
-  addPoints()
-  statusBubbleOne = statusBubbleOne + 1;
-  debug.innerHTML = statusBubbleOne;
-  bubbleOne.style.transform = "scale(" + statusBubbleOne / 10 + ")";
+  if(statusBubbleOne > 0) {
+    addPoints()
+    statusBubbleOne = statusBubbleOne + 1;
+
+    debug.innerHTML = statusBubbleOne;
+    bubbleOne.style.transform = "scale(" + statusBubbleOne / 10 + ")";
+  }
+
+  // after 15 clicks
+  if (statusBubbleOne > 15) {
+    console.log("bubble is now burst")
+
+    bubbleOneImg.src= "bubbleburst.png";
+    statusBubbleOne = -1;
+
+    // reset bubble after 2sec
+    setTimeout(function() {
+
+        bubbleOne.classList.add("bubble-reset");
+        bubbleOne.classList.remove("bubble-1");
+        bubbleOneImg.src= "bubblewhite.png";
+        void bubbleOne.offsetWidth;     // magic...
+        bubbleOne.classList.remove("bubble-reset");
+        bubbleOne.classList.add("bubble-1");
+
+        statusBubbleOne = 10
+    }, 2000);
+  }
 
   counter.innerHTML = points;
 };
