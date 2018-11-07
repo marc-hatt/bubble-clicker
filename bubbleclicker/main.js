@@ -11,6 +11,9 @@ let bubbleSix = document.getElementById("bubbleSix");
 let bubbleSixImg = document.getElementById("bubbleSixImg");
 let counter = document.getElementById("counter");
 let debug = document.getElementById("debug");
+let showOverlay = document.getElementById("showOverlay");
+let gameoOver = document.getElementById("gameOver");
+let close = document.getElementById("close");
 
 /* startet das update alle sekunde */
 var interval = setInterval(function() {
@@ -27,6 +30,26 @@ let points = 0;
 let addPoints = function() {
     points = points + 1;
 }
+
+//setTimeout(function(){ location.reload(); }, 10000);
+let timeleft = 10;
+
+if (timeleft <= 0) {
+          clearInterval(downloadTimer);
+
+          gameOver.classList.remove("layer-hidden");
+          total.innerHTML = points;
+
+          // end of game
+
+          let showOverlayEvent = function (e) {
+              e.preventDefault; // default behaviour chanceled
+              overlay.classList.remove("layer-hidden");
+              close.classList.remove("layer-hidden");
+
+        }
+}
+
 
 
 //PROGRESSBAR------------------------
@@ -61,8 +84,10 @@ function createProgressbar(id, duration, callback) {
 }
 
 addEventListener('load', function() {
-  createProgressbar('progressbar1', '40s', function() {
-    alert('Time out. Your Score is ');
+  createProgressbar('progressbar1', '10s', function() {
+    clearInterval(interval);
+  //  alert('Time out. Your Score is ');
+
   });
 });
 //-----------------------------
@@ -73,7 +98,7 @@ addEventListener('load', function() {
 
 //GameOver--------------------------
 let checkGameover = function() {
-  if (statusBubbleOne === 0 && statusBubbleTwo === 0 && statusBubbleThree === 0 && statusBubbleFour === 0 && statusBubbleFive === 0 && statusBubbleSix === 0) {
+  if (statusProgressbar >= 0) {
     clearInterval(interval); /* stopt das update alle sekunde*/
 
 
@@ -472,7 +497,6 @@ bubbleThree.addEventListener("click", clickerThree);
 bubbleFour.addEventListener("click", clickerFour);
 bubbleFive.addEventListener("click", clickerFive);
 bubbleSix.addEventListener("click", clickerSix);
-
 
 
 
