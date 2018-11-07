@@ -28,11 +28,9 @@ var interval = setInterval(function() {
 
 
 let addPoints = function() {
-  if (points >= 10) {
-    points = points + 10;
-  } else {
+
     points = points + 1;
-  }
+
 }
 
 
@@ -46,8 +44,19 @@ let shrinkOne = function(e) {
     statusBubbleOne = statusBubbleOne - 1;
     debug.innerHTML = statusBubbleOne;
     bubbleOne.style.transform = "scale(" + statusBubbleOne / 10 + ")";
-  }
+
+} else {
+  bubbleOne.classList.add("bubble-reset");
+  bubbleOne.classList.remove("bubble-1");
+  bubbleOneImg.src= "bubble-1.png";
+  void bubbleOne.offsetWidth;     // magic...
+  bubbleOne.classList.remove("bubble-reset");
+  bubbleOne.classList.add("bubble-1");
+  statusBubbleOne = 10
+}
+
 };
+
 
 let clickerOne = function(e) {
   if(statusBubbleOne > 0) {
@@ -61,15 +70,12 @@ let clickerOne = function(e) {
   // after 15 clicks
     if (statusBubbleOne > 15) {
     console.log("bubble is now burst")
-
+    points = points + 50;
     bubbleOneImg.src= "bubble-burst.png";
+
     statusBubbleOne = -1;
 
-    let addPoints = function() {
-      if (points >= 15) {
-        points = points + 50;
-      }
-    }
+
 
     // reset bubble after 2sec
     setTimeout(function() {
@@ -99,6 +105,14 @@ let shrinkTwo = function(e) {
     statusBubbleTwo = statusBubbleTwo - 1;
     debug.innerHTML = statusBubbleTwo;
     bubbleTwo.style.transform = "scale(" + statusBubbleTwo / 10 + ")";
+  } else {
+      bubbleTwo.classList.add("bubble-reset");
+      bubbleTwo.classList.remove("bubble-2");
+      bubbleTwoImg.src= "bubble-2.png";
+      void bubbleTwo.offsetWidth;     // magic...
+      bubbleTwo.classList.remove("bubble-reset");
+      bubbleTwo.classList.add("bubble-2");
+      statusBubbleTwo = 10
   }
 };
 
@@ -116,7 +130,7 @@ let clickerTwo = function(e) {
   // after 15 clicks
   if (statusBubbleTwo > 15) {
     console.log("bubble is now burst")
-
+    points = points + 50;
     bubbleTwoImg.src= "bubble-burst.png";
     statusBubbleTwo = -1;
 
@@ -150,6 +164,15 @@ let shrinkThree = function(e) {
     statusBubbleThree = statusBubbleThree - 1;
     debug.innerHTML = statusBubbleThree;
     bubbleThree.style.transform = "scale(" + statusBubbleThree / 10 + ")";
+
+  } else {
+      bubbleThree.classList.add("bubble-reset");
+      bubbleThree.classList.remove("bubble-3");
+      bubbleThreeImg.src= "bubble-3.png";
+      void bubbleThree.offsetWidth;     // magic...
+      bubbleThree.classList.remove("bubble-reset");
+      bubbleThree.classList.add("bubble-3");
+      statusBubbleThree = 10
   }
 };
 
@@ -165,7 +188,7 @@ let clickerThree = function(e) {
   // after 15 clicks
   if (statusBubbleThree > 15) {
     console.log("bubble is now burst")
-
+    points = points + 50;
     bubbleThreeImg.src= "bubble-burst.png";
     statusBubbleThree = -1;
 
@@ -196,6 +219,15 @@ let shrinkFour = function(e) {
     statusBubbleFour = statusBubbleFour - 1;
     debug.innerHTML = statusBubbleFour;
     bubbleFour.style.transform = "scale(" + statusBubbleFour / 10 + ")";
+
+  } else {
+      bubbleFour.classList.add("bubble-reset");
+      bubbleFour.classList.remove("bubble-4");
+      bubbleFourImg.src= "bubble-4.png";
+      void bubbleFour.offsetWidth;     // magic...
+      bubbleFour.classList.remove("bubble-reset");
+      bubbleFour.classList.add("bubble-4");
+      statusBubbleFour = 10
   }
 };
 
@@ -211,7 +243,7 @@ let clickerFour = function(e) {
   // after 15 clicks
   if (statusBubbleFour > 15) {
     console.log("bubble is now burst")
-
+    points = points + 50;
     bubbleFourImg.src= "bubble-burst.png";
     statusBubbleFour = -1;
 
@@ -244,6 +276,15 @@ let shrinkFive = function(e) {
     statusBubbleFive = statusBubbleFive - 1;
     debug.innerHTML = statusBubbleFive;
     bubbleFive.style.transform = "scale(" + statusBubbleFive / 10 + ")";
+
+  } else {
+      bubbleFive.classList.add("bubble-reset");
+      bubbleFive.classList.remove("bubble-5");
+      bubbleFiveImg.src= "bubble-5.png";
+      void bubbleFive.offsetWidth;     // magic...
+      bubbleFive.classList.remove("bubble-reset");
+      bubbleFive.classList.add("bubble-5");
+      statusBubbleFive = 10
   }
 };
 
@@ -259,7 +300,7 @@ let clickerFive = function(e) {
   // after 15 clicks
   if (statusBubbleFive > 15) {
     console.log("bubble is now burst")
-
+    points = points + 50;
     bubbleFiveImg.src= "bubble-burst.png";
     statusBubbleFive = -1;
 
@@ -291,6 +332,14 @@ let shrinkSix = function(e) {
     statusBubbleSix = statusBubbleSix - 1;
     debug.innerHTML = statusBubbleSix;
     bubbleSix.style.transform = "scale(" + statusBubbleSix / 10 + ")";
+  } else {
+    bubbleSix.classList.add("bubble-reset");
+    bubbleSix.classList.remove("bubble-6");
+    bubbleSixImg.src= "bubble-6.png";
+    void bubbleSix.offsetWidth;     // magic...
+    bubbleSix.classList.remove("bubble-reset");
+    bubbleSix.classList.add("bubble-6");
+    statusBubbleSix = 10
   }
 };
 
@@ -306,7 +355,7 @@ let clickerSix = function(e) {
   // after 15 clicks
   if (statusBubbleSix > 15) {
     console.log("bubble is now burst")
-
+    points = points + 50;
     bubbleSixImg.src= "bubble-burst.png";
     statusBubbleSix = -1;
 
