@@ -1,15 +1,14 @@
 let bubbleOne = document.getElementById("bubbleOne");
 let bubbleOneImg = document.getElementById("bubbleOneImg");
 let bubbleTwo = document.getElementById("bubbleTwo");
-//let bubbleTwoImg = document.getElementById("bubbleTwoImg");
-let bubbleThree = document.getElementById("bubbleThree");
-//let bubbleThreeImg = document.getElementById("bubbleThreeImg");
+let bubbleTwoImg = document.getElementById("bubbleTwoImg");
+let bubbleThreeImg = document.getElementById("bubbleThreeImg");
 let bubbleFour = document.getElementById("bubbleFour");
-//let bubbleFourImg = document.getElementById("bubbleFourImg");
+let bubbleFourImg = document.getElementById("bubbleFourImg");
 let bubbleFive = document.getElementById("bubbleFive");
 let bubbleFiveImg = document.getElementById("bubbleFiveImg");
 let bubbleSix = document.getElementById("bubbleSix");
-//let bubbleSixImg = document.getElementById("bubbleSixImg");
+let bubbleSixImg = document.getElementById("bubbleSixImg");
 let counter = document.getElementById("counter");
 let debug = document.getElementById("debug");
 
@@ -23,20 +22,8 @@ var interval = setInterval(function() {
   shrinkFour();
   shrinkFive();
   shrinkSix();
-  checkGameover();
 }, 1000);
 
-
-/*----------GameOver---------*/
-let checkGameover = function() {
-  if (statusBubbleOne === 0 && statusBubbleTwo === 0 && statusBubbleThree === 0 && statusBubbleFour === 0 && statusBubbleFive === 0 && statusBubbleSix === 0) {
-    clearInterval(interval); /* stopt das update alle sekunde*/
-
-
-    /* hier dein code */
-    alert("hier bitte ein handling für gameover. zum beispiel ein overlay über das spiel.")
-  }
-}
 
 
 
@@ -55,6 +42,7 @@ let statusBubbleOne = 10;
 
 let shrinkOne = function(e) {
   if (statusBubbleOne > 0) {
+
     statusBubbleOne = statusBubbleOne - 1;
     debug.innerHTML = statusBubbleOne;
     bubbleOne.style.transform = "scale(" + statusBubbleOne / 10 + ")";
@@ -76,6 +64,12 @@ let clickerOne = function(e) {
 
     bubbleOneImg.src= "bubble-burst.png";
     statusBubbleOne = -1;
+
+    let addPoints = function() {
+      if (points >= 15) {
+        points = points + 50;
+      }
+    }
 
     // reset bubble after 2sec
     setTimeout(function() {
@@ -115,6 +109,8 @@ let clickerTwo = function(e) {
 
     debug.innerHTML = statusBubbleTwo;
     bubbleTwo.style.transform = "scale(" + statusBubbleTwo / 10 + ")";
+
+
   }
 
   // after 15 clicks
