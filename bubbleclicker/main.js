@@ -12,8 +12,6 @@ let bubbleSixImg = document.getElementById("bubbleSixImg");
 let counter = document.getElementById("counter");
 let debug = document.getElementById("debug");
 
-let points = 0;
-
 /* startet das update alle sekunde */
 var interval = setInterval(function() {
   shrinkOne();
@@ -24,10 +22,69 @@ var interval = setInterval(function() {
   shrinkSix();
 }, 1000);
 
+let points = 0;
 
 let addPoints = function() {
     points = points + 1;
 }
+
+
+//PROGRESSBAR------------------------
+/*
+ *  Creates a progressbar.
+ *  @param id the id of the div we want to transform in a progressbar
+ *  @param duration the duration of the timer example: '10s'
+ *  @param callback, optional function which is called when the progressbar reaches 0.
+ */
+function createProgressbar(id, duration, callback) {
+  // We select the div that we want to turn into a progressbar
+  var progressbar = document.getElementById(id);
+  progressbar.className = 'progressbar';
+
+  // We create the div that changes width to show progress
+  var progressbarinner = document.createElement('div');
+  progressbarinner.className = 'inner';
+
+  // Now we set the animation parameters
+  progressbarinner.style.animationDuration = duration;
+
+  // Eventually couple a callback
+  if (typeof(callback) === 'function') {
+    progressbarinner.addEventListener('animationend', callback);
+  }
+
+  // Append the progressbar to the main progressbardiv
+  progressbar.appendChild(progressbarinner);
+
+  // When everything is set up we start the animation
+  progressbarinner.style.animationPlayState = 'running';
+}
+
+addEventListener('load', function() {
+  createProgressbar('progressbar1', '40s', function() {
+    alert('Time out. Your Score is ');
+  });
+});
+//-----------------------------
+
+
+
+
+
+//GameOver--------------------------
+let checkGameover = function() {
+  if (statusBubbleOne === 0 && statusBubbleTwo === 0 && statusBubbleThree === 0 && statusBubbleFour === 0 && statusBubbleFive === 0 && statusBubbleSix === 0) {
+    clearInterval(interval); /* stopt das update alle sekunde*/
+
+
+    /* hier dein code */
+    alert("hier bitte ein handling für gameover. zum beispiel ein overlay über das spiel.")
+  }
+}
+
+
+
+
 
 
 //random animation ------------
@@ -43,8 +100,8 @@ $(document).ready(function(){
 function makeNewPosition(){
 
     // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 50;
-    var w = $(window).width() - 50;
+    var h = $(window).height() - 70;
+    var w = $(window).width() - 70;
 
     var nh = Math.floor(Math.random() * h);
     var nw = Math.floor(Math.random() * w);

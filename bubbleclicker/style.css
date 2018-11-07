@@ -14,7 +14,7 @@ body {
 }
 
 #bath img {
-  positon: absolute;
+  position: absolute;
   bottom: 0;
   width: 100%;
 }
@@ -25,11 +25,42 @@ body {
   border-width: thin;
   text-align: center;
   font-size: 30px;
-  color: absolute;
+  color: #4A90E2;
   position: absolute;
-  margin: 15px;
-  left: 0;
-  top: 0;
+  top: 4%;
+  left: 50%;
+}
+
+
+.progressbar {
+  width: 80%;
+  margin: 25px auto;
+  border: solid 1px #ffff;
+}
+.progressbar .inner {
+  height: 15px;
+  animation: progressbar-countdown;
+  /* Placeholder, this will be updated using javascript */
+  animation-duration: 40s;
+  /* We stop in the end */
+  animation-iteration-count: 1;
+  /* Stay on pause when the animation is finished finished */
+  animation-fill-mode: forwards;
+  /* We start paused, we start the animation using javascript */
+  animation-play-state: paused;
+  /* We want a linear animation, ease-out is standard */
+  animation-timing-function: linear;
+}
+@keyframes progressbar-countdown {
+  0% {
+    width: 100%;
+    background: #4A90E2;
+  }
+
+  100% {
+    width: 0%;
+    background: #F00;
+  }
 }
 
 
@@ -76,12 +107,12 @@ body {
 
 
 @-webkit-keyframes mymove {
-    from {top: -400px;}
+    from {top: -300px;}
     to {top:-2500px;}
 }
 
 @keyframes mymove {
-    from {top: -400px;}
+    from {top: -300px;}
     to {top:-2500px;}
 }
 
@@ -94,7 +125,7 @@ body {
 
 
     .bubble-1 {
-        margin-left: 600px;
+        margin-left: 100px;
         width: 150px;
         height: auto;
         position: relative;
@@ -117,7 +148,7 @@ body {
 
 
     .bubble-3 {
-        margin-left: 800px;
+        margin-left: 500px;
         width: 200px;
         height: auto;
         position: relative;
@@ -128,7 +159,7 @@ body {
     }
 
     .bubble-4 {
-        margin-left: 1100px;
+        margin-left: 400px;
         width: 300px;
         height: auto;
         position: relative;
@@ -139,26 +170,26 @@ body {
     }
 
     .bubble-5 {
-        margin-left: 1300px;
+        margin-left: 700px;
         width: 400px;
         height: auto;
         position: relative;
         -webkit-animation: mymove infinite;
         -webkit-animation-duration: 5s;
       /*  animation: mymove infinite; */
-        animation-duration: 50s;
+        animation-duration: 40s;
     }
 
 
     .bubble-6 {
-        margin-left: 500px;
+        margin-left: 1000px;
         width: 450px;
         height: auto;
         position: relative;
         -webkit-animation: mymove infinite;
         -webkit-animation-duration: 5s;
       /*  animation: mymove infinite; */
-        animation-duration: 50s;
+        animation-duration: 40s;
     }
 
 }
