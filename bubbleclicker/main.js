@@ -79,7 +79,7 @@ addEventListener('load', function() {
 
 
 
-
+/*
 
 //random animation ------------
 $(document).ready(function(){
@@ -112,7 +112,7 @@ function animateDiv(myclass){
 
 };
 
-
+*/
 
 
 
