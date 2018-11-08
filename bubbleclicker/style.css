@@ -9,7 +9,7 @@ body {
     display: none;
 }
 
-.gameover{
+#gameover{
     position: fixed;
     top: 0;
     left: 0;
@@ -19,6 +19,7 @@ body {
     text-align: center;
     color: #ffffff;
     font-size: 2rem ;
+    z-index: 900;
 }
 
 .viewport {
