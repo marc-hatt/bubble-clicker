@@ -26,6 +26,7 @@ var interval = setInterval(function() {
   shrinkSix();
 }, 1000);
 
+
 let points = 0;
 
 let addPoints = function() {
@@ -152,7 +153,6 @@ let clickerOne = function(e) {
     console.log("bubble is now burst")
     points = points + 50;
     bubbleOneImg.src= "bubble-burst.png";
-
     statusBubbleOne = -1;
 
 
