@@ -12,8 +12,9 @@ let bubbleSixImg = document.getElementById("bubbleSixImg");
 let counter = document.getElementById("counter");
 let debug = document.getElementById("debug");
 let showOverlay = document.getElementById("showOverlay");
-let gameoOver = document.getElementById("gameOver");
+let gameover = document.getElementById("gameover");
 let close = document.getElementById("close");
+let total = document.getElementById("total");
 
 /* startet das update alle sekunde */
 var interval = setInterval(function() {
@@ -84,9 +85,8 @@ function createProgressbar(id, duration, callback) {
 
 addEventListener('load', function() {
   createProgressbar('progressbar1', '40s', function() {
-  //  alert('Time out. Your Score is ');
-
-
+    gameover.classList.remove("layer-hidden");
+    total.innerHTML = points;
 });
 });
 //-----------------------------
