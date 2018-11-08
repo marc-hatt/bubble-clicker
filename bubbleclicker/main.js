@@ -32,24 +32,8 @@ let addPoints = function() {
     points = points + 1;
 }
 
-//setTimeout(function(){ location.reload(); }, 10000);
-let timeleft = 40;
-/*
-if (timeleft <= 0) {
-          clearInterval(downloadTimer);
-          gameOver.classList.remove("layer-hidden");
-          total.innerHTML = points;
+//let timeleft = 40;
 
-          // end of game
-
-          let showOverlayEvent = function (e) {
-              e.preventDefault; // default behaviour chanceled
-              overlay.classList.remove("layer-hidden");
-              close.classList.remove("layer-hidden");
-
-        }
-}
-/*
 
 
 //PROGRESSBAR------------------------
@@ -91,20 +75,6 @@ addEventListener('load', function() {
 });
 //-----------------------------
 
-
-
-
-
-//GameOver--------------------------
-let checkGameover = function() {
-  if (statusProgressbar >= 0) {
-    clearInterval(interval); /* stopt das update alle sekunde*/
-
-
-    /* hier dein code */
-    alert("hier bitte ein handling für gameover. zum beispiel ein overlay über das spiel.")
-  }
-}
 
 
 

@@ -10,16 +10,17 @@ body {
 }
 
 #gameover{
+    font-family: 'Bubblegum Sans';
     position: fixed;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #FF0000;
+    background-color: #4A90E2;
     text-align: center;
     color: #ffffff;
     font-size: 2rem ;
-    z-index: 900;
+    z-index: 1300;
 }
 
 .viewport {
