@@ -24,7 +24,7 @@ var interval = setInterval(function() {
   shrinkFour();
   shrinkFive();
   shrinkSix();
-}, 1000);
+}, 1500);
 
 
 let points = 0;
@@ -94,8 +94,8 @@ $(document).ready(function(){
 function makeNewPosition(){
 
     // Get viewport dimensions (remove the dimension of the div)
-    var h = $(window).height() - 70;
-    var w = $(window).width() - 70;
+    var h = $(window).height() - 40;
+    var w = $(window).width() - 40;
 
     var nh = Math.floor(Math.random() * h);
     var nw = Math.floor(Math.random() * w);

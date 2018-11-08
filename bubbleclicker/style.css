@@ -30,10 +30,11 @@ body {
   overflow: hidden;
 }
 
-#bath img {
+.background {
   position: absolute;
   bottom: 0;
   width: 100%;
+
 }
 
 
@@ -44,7 +45,7 @@ body {
   font-size: 30px;
   color: #4A90E2;
   position: absolute;
-  top: 4%;
+  top: 8%;
   left: 50%;
 }
 
@@ -124,13 +125,13 @@ body {
 
 
 @-webkit-keyframes mymove {
-    from {top: -300px;}
-    to {top:-2500px;}
+    from {top: -50px;}
+    to {top:-2700px;}
 }
 
 @keyframes mymove {
-    from {top: -300px;}
-    to {top:-2500px;}
+    from {top: -50px;}
+    to {top:-2700px;}
 }
 
 
@@ -143,24 +144,24 @@ body {
 
     .bubble-1 {
         margin-left: 100px;
-        width: 150px;
+        width: 250px;
         height: auto;
         position: relative;
         -webkit-animation: mymove infinite;
         -webkit-animation-duration: 15s;
       /*  animation: mymove infinite; */
-        animation-duration: 35s;
+        animation-duration: 30s;
     }
 
     .bubble-2 {
         margin-left: 200px;
-        width: 260px;
+        width: 300px;
         height: auto;
         position: relative;
         -webkit-animation: mymove infinite;
         -webkit-animation-duration: 15s;
       /*  animation: mymove infinite; */
-        animation-duration: 40s;
+        animation-duration: 30s;
     }
 
 
@@ -170,43 +171,43 @@ body {
         height: auto;
         position: relative;
         -webkit-animation: mymove infinite;
-        -webkit-animation-duration: 5s;
+        -webkit-animation-duration: 15s;
       /*  animation: mymove infinite; */
-        animation-duration: 40s;
+        animation-duration: 30s;
     }
 
     .bubble-4 {
         margin-left: 400px;
-        width: 300px;
-        height: auto;
-        position: relative;
-        -webkit-animation: mymove infinite;
-        -webkit-animation-duration: 5s;
-      /*  animation: mymove infinite; */
-        animation-duration: 40s;
-    }
-
-    .bubble-5 {
-        margin-left: 700px;
         width: 400px;
         height: auto;
         position: relative;
         -webkit-animation: mymove infinite;
-        -webkit-animation-duration: 5s;
+        -webkit-animation-duration: 15s;
       /*  animation: mymove infinite; */
-        animation-duration: 40s;
+        animation-duration: 30s;
+    }
+
+    .bubble-5 {
+        margin-left: 700px;
+        width: 500px;
+        height: auto;
+        position: relative;
+        -webkit-animation: mymove infinite;
+        -webkit-animation-duration: 15s;
+      /*  animation: mymove infinite; */
+        animation-duration: 30s;
     }
 
 
     .bubble-6 {
-        margin-left: 1000px;
+        margin-left: 600px;
         width: 450px;
         height: auto;
         position: relative;
         -webkit-animation: mymove infinite;
-        -webkit-animation-duration: 5s;
+        -webkit-animation-duration: 15s;
       /*  animation: mymove infinite; */
-        animation-duration: 40s;
+        animation-duration: 30s;
     }
 
 }
