@@ -36,7 +36,6 @@ let timeleft = 10;
 
 if (timeleft <= 0) {
           clearInterval(downloadTimer);
-
           gameOver.classList.remove("layer-hidden");
           total.innerHTML = points;
 
@@ -85,11 +84,22 @@ function createProgressbar(id, duration, callback) {
 
 addEventListener('load', function() {
   createProgressbar('progressbar1', '10s', function() {
-    clearInterval(interval);
   //  alert('Time out. Your Score is ');
 
+            gameOver.classList.remove("layer-hidden");
+            total.innerHTML = points;
+
+            // end of game
+
+            let showOverlayEvent = function (e) {
+                e.preventDefault; // default behaviour chanceled
+                overlay.classList.remove("layer-hidden");
+                close.classList.remove("layer-hidden");
+
+          }
+  }
+
   });
-});
 //-----------------------------
 
 
