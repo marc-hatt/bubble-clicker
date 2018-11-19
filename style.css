@@ -9,10 +9,13 @@ body {
     display: none;
 }
 
+a {
+  text-decoration: none;
+  font-family: 'Bubblegum Sans';
+}
 
 #backbutton {
   float: left;
-  font-family: 'Bubblegum Sans';
   font-size: 1.7rem;
   margin: 1rem;
   margin-bottom: 0;
@@ -23,7 +26,6 @@ body {
 }
 
 #backbutton:hover {
-  font-family: 'Bubblegum Sans';
   font-size: 1.7rem ;
   color: white;
   cursor: pointer;
@@ -32,7 +34,6 @@ body {
 
 #backbutton-layer {
   float: left;
-  font-family: 'Bubblegum Sans';
   font-size: 1.7rem;
   margin: 1rem;
   margin-bottom: 0;
