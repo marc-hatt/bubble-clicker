@@ -9,6 +9,46 @@ body {
     display: none;
 }
 
+
+#backbutton {
+  float: left;
+  font-family: 'Bubblegum Sans';
+  font-size: 1.7rem;
+  margin: 1rem;
+  margin-bottom: 0;
+  margin-top: 0;
+  margin-left: 2rem;
+  color: #4A90E2;
+  cursor: pointer;
+}
+
+#backbutton:hover {
+  font-family: 'Bubblegum Sans';
+  font-size: 1.7rem ;
+  color: white;
+  cursor: pointer;
+}
+
+
+#backbutton-layer {
+  float: left;
+  font-family: 'Bubblegum Sans';
+  font-size: 1.7rem;
+  margin: 1rem;
+  margin-bottom: 0;
+  margin-top: 26px;
+  margin-left: 2rem;
+  color: #BAE0F5;
+  cursor: pointer;
+}
+
+#backbutton-layer:hover {
+  font-family: 'Bubblegum Sans';
+  font-size: 1.7rem ;
+  color: white;
+  cursor: pointer;
+}
+
 #gameover{
     font-family: 'Bubblegum Sans';
     position: fixed;
@@ -39,24 +79,25 @@ body {
 
 
 #counter {
+  position: fixed;
   font-family: 'Bubblegum Sans';
   border-width: thin;
   text-align: center;
   font-size: 30px;
   color: #4A90E2;
   position: absolute;
-  top: 8%;
+  top: 6rem;
   left: 50%;
 }
 
 
 .progressbar {
-  width: 80%;
-  margin: 25px auto;
+  width: 75%;
+  margin: 26px auto;
   border: solid 1px #ffff;
 }
 .progressbar .inner {
-  height: 15px;
+  height: 25px;
   animation: progressbar-countdown;
   /* Placeholder, this will be updated using javascript */
   animation-duration: 40s;
@@ -69,6 +110,7 @@ body {
   /* We want a linear animation, ease-out is standard */
   animation-timing-function: linear;
 }
+
 @keyframes progressbar-countdown {
   0% {
     width: 100%;
