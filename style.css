@@ -71,9 +71,10 @@ a {
   overflow: hidden;
 }
 
-.background {
-  position: absolute;
-  bottom: 0;
+#background {
+  position: fixed;
+  bottom: -20px;
+  left: 0;
   width: 100%;
 
 }
