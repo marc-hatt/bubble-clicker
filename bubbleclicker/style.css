@@ -13,9 +13,9 @@ body {
   overflow: hidden;
 }
 
-#bath img {
-  positon: absolute;
-  bottom: 0;
+#bath {
+  position: fixed;
+  bottom: -20px;
   width: 100%;
 }
 
